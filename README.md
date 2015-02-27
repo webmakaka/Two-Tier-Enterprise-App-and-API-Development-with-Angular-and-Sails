@@ -47,3 +47,15 @@
     Description: a social media scheduler
     Website: http://temp.com
     Callback URL: http://127.0.0.1:8000
+
+
+    mkdir backend
+    mv * ./backend
+
+    mkdir frontend
+    cd frontend
+    npm init
+
+    npm install --save-dev bower
+    bower init
+    bower install --save angular
