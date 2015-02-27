@@ -28,4 +28,22 @@
     http://localhost:1337/user
 
 
-    
+## 02. Posting and Authentication
+
+
+### 03. Creating Our Login Service Endpoint Skeleton
+
+    http://localhost:1337/user/login
+    В консоли сервера появился вывод сообщения.
+
+    В models.js разкомментировали migrate: 'alter', чтобы sails не задавал вопросов при старте
+
+
+### 04. Registering Our App with Twitter
+
+    https://apps.twitter.com/
+
+    Name: socialfleet
+    Description: a social media scheduler
+    Website: http://temp.com
+    Callback URL: http://127.0.0.1:8000
