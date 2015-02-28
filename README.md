@@ -49,6 +49,8 @@
     Callback URL: http://127.0.0.1:8000
 
 
+### 05. Setting up Angular
+
     mkdir backend
     mv * ./backend
 
@@ -59,3 +61,10 @@
     npm install --save-dev bower
     bower init
     bower install --save angular
+
+
+### 06. Automating Tasks with Gulp
+
+    cd frontend/
+    npm install --save-dev gulp
+    gulp
