@@ -68,3 +68,11 @@
     cd frontend/
     npm install --save-dev gulp
     gulp
+
+
+### 07. Setting up the Server
+
+
+    cd frontend/
+    npm install --save gulp-webserver
+    gulp
