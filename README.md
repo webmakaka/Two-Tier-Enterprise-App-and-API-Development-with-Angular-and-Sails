@@ -72,7 +72,13 @@
 
 ### 07. Setting up the Server
 
-
     cd frontend/
     npm install --save gulp-webserver
+    gulp
+
+localhost:8000
+
+
+### 08. Optimizing Our Gulp Tasks
+
     gulp
