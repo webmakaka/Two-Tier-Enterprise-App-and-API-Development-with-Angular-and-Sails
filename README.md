@@ -82,3 +82,10 @@ localhost:8000
 ### 08. Optimizing Our Gulp Tasks
 
     gulp
+
+### 09. How to Autoload Vendor Files with Gulp
+
+    cd frontend/
+    npm install --save-dev main-bower-files
+    npm install --save-dev gulp-inject
+    gulp
