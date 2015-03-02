@@ -102,3 +102,10 @@ localhost:8000
     http://localhost/
 
 По клику по кнопке в консоли печатается "works"
+
+
+### 12. Using Gulp Watchers to Autorun Scripts
+
+    cd frontend/
+    npm install --save-dev del
+    gulp
