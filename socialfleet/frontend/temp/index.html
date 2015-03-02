@@ -5,9 +5,11 @@
         <!-- inject:css -->
         <!-- endinject -->
     </head>
-    <body>
+    <body ng-controller="Login">
 
         hi
+
+        <button ng-click=login()>Login</button>
 
         <!-- vendorInject:js -->
         <script src="vendor/angular.js"></script>
@@ -15,6 +17,7 @@
 
         <!-- inject:js -->
         <script src="app.js"></script>
+        <script src="login.js"></script>
         <!-- endinject -->
     </body>
 </html>

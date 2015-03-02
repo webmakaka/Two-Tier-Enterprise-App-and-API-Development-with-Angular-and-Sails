@@ -95,4 +95,10 @@ localhost:8000
 
     gulp
 
-    
+
+### 11. Creating the Login Controller
+
+    gulp
+    http://localhost/
+
+По клику по кнопке в консоли печатается "works"
