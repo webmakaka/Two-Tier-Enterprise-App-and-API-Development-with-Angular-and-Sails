@@ -15,7 +15,7 @@ module.exports = {
 	login: function(req, res){
 		var requestTokenUrl = 'https://api.twitter.com/oauth/request_token';
 		var accessTokenUrl = 'https://api.twitter.com/oauth/access_token';
-		var authenticateUrl = 'https://api.twitter.com/oauth/authenticate';
+		var authenticateUrl = 'https://api.twitter.com/oauth/authorize';
 
 		if (!req.query.oauth_token || !req.query.oauth_verifier) {
 			var requestTokenOauth = {
@@ -58,6 +58,8 @@ module.exports = {
 					}
 					user.twitter = profile.user_id;
 					user.displayName = user.displayName || profile.screen_name;
+					user.twitterToken = profile.oauth_token;
+					user.twitterSecret = profile.oauth_token_secret;
 					user.save(function(err) {
 					res.send({ token: createToken(user) });
 					});
@@ -72,7 +74,9 @@ module.exports = {
 				}
 				User.create({
 					twitter: profile.user_id,
-					displayName: profile.screen_name
+					displayName: profile.screen_name,
+					twittertToken: profile.oauth_token,
+					twitterSecret: profile.oauth_token_secret
 				}).exec(function(err, user) {
 					var token = createToken(user);
 					res.send({ token: token });

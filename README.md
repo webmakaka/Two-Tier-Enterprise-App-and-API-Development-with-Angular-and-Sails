@@ -151,3 +151,26 @@ https://github.com/sahat/satellizer/blob/master/examples/server/node/server.js
     v Allow this application to be used to Sign in with Twitter
 
 В chrome при попытке авторизации получаем в Resources -> Local Storage -> satellizer_token
+
+
+
+### 05. Tweeting from Our Backend
+
+    cd backend/
+    sails generate controller post
+
+https://github.com/ttezel/twit/
+
+    npm install --save twit
+
+apps.twitter.com -> Permissions  
+Read, Write and Access direct messages  
+
+В chrome удаляем Resources -> Local Storage -> satellizer_token  
+Удаляем файл backend/.tmp/localDiskDb.db
+
+Делаем в браузере login.
+
+Из файла backend/.tmp/localDiskDb.db вставляем twittetToken и twittetTokenSecret в PostControllet.js
+
+По нажатию на tweet, в твиттере появилась запись "hello world!!!".
