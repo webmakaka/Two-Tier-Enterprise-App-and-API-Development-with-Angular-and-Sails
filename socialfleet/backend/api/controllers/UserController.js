@@ -7,6 +7,6 @@
 
 module.exports = {
 	login: function(req, res){
-		console.log("test");
+		res.send("hello");
 	}
 };

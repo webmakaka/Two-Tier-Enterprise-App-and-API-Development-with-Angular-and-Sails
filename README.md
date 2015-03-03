@@ -121,3 +121,17 @@ https://github.com/sahat/satellizer
     cd frontend/
     bower install --save satellizer
     gulp
+
+
+### 03. How to Talk to Our Backend with a Proxy
+
+    cd backend/
+    sails lift
+
+
+    cd frontend/
+    gulp
+
+    http://localhost/
+
+    По нажатию на кнопку получаем сообщение "hello"
