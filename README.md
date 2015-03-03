@@ -45,8 +45,8 @@
 
     Name: socialfleet
     Description: a social media scheduler
-    Website: http://temp.com
-    Callback URL: http://127.0.0.1:8000
+    Website: http://marley.org
+    Callback URL: http://127.0.0.1:80
 
 
 ### 05. Setting up Angular
@@ -135,3 +135,19 @@ https://github.com/sahat/satellizer
     http://localhost/
 
     По нажатию на кнопку получаем сообщение "hello"
+
+
+### 04. Finishing Authentication
+
+https://github.com/sahat/satellizer/blob/master/examples/server/node/server.js
+
+
+    cd backend/
+    npm install --save request
+    npm install --save jwt-simple
+    npm install --save moment
+
+    apps.twitter.com
+    v Allow this application to be used to Sign in with Twitter
+
+В chrome при попытке авторизации получаем в Resources -> Local Storage -> satellizer_token
