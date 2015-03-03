@@ -193,3 +193,6 @@ tweet получили сообщение в консоли:
     twitterReply: '{"errors":[{"code":187,"message":"Status is a duplicate."}]}',
     code: 187,
     allErrors: [ { code: 187, message: 'Status is a duplicate.' } ] }
+
+
+### 07. Tweeting with Authenticated User

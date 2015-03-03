@@ -75,7 +75,7 @@ module.exports = {
 				User.create({
 					twitter: profile.user_id,
 					displayName: profile.screen_name,
-					twittertToken: profile.oauth_token,
+					twitterToken: profile.oauth_token,
 					twitterSecret: profile.oauth_token_secret
 				}).exec(function(err, user) {
 					var token = createToken(user);
