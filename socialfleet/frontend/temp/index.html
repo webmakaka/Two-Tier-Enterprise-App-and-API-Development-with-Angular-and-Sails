@@ -3,13 +3,17 @@
     <head>
         <title>My index</title>
         <!-- inject:css -->
+        <link rel="stylesheet" href="bootstrap.css">
         <!-- endinject -->
     </head>
     <body ng-controller="Login">
 
-        <button ng-click=login()>Login</button>
-        <button ng-click=tweet()>Tweet</button>
+        <nav class="navbar navbar-default"></nav>
 
+        <div class="container">
+            <button class="btn btn-primary" ng-click=login()>Login</button>
+            <button class="btn btn-default" ng-click=tweet()>Tweet</button>
+        </div>
         <!-- vendorInject:js -->
         <script src="vendor/angular.js"></script>
         <script src="vendor/satellizer.js"></script>

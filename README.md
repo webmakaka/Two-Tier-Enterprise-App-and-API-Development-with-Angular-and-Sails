@@ -196,3 +196,11 @@ tweet получили сообщение в консоли:
 
 
 ### 07. Tweeting with Authenticated User
+
+
+## 04. Making a New Post
+
+
+### 02. Styling with Bootstrap
+
+bootswatch.com -> Sandstone
