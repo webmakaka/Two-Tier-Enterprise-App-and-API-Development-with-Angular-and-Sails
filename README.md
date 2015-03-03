@@ -174,3 +174,22 @@ Read, Write and Access direct messages
 Из файла backend/.tmp/localDiskDb.db вставляем twittetToken и twittetTokenSecret в PostControllet.js
 
 По нажатию на tweet, в твиттере появилась запись "hello world!!!".
+
+
+### 06. Securing Our Tweets with Policies
+
+В паблике персональные данные по адресу:
+
+http://localhost:1337/user
+
+После внесения правок
+
+http://localhost/
+
+tweet получили сообщение в консоли:
+
+    message: 'Status is a duplicate.',
+    statusCode: 403,
+    twitterReply: '{"errors":[{"code":187,"message":"Status is a duplicate."}]}',
+    code: 187,
+    allErrors: [ { code: 187, message: 'Status is a duplicate.' } ] }
