@@ -240,3 +240,6 @@ bootswatch.com -> Sandstone
 + печатаем owner
 
 ### 10. Getting All Our Posts
+
+
+### 11. Displaying All Our Posts
