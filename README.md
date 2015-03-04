@@ -226,3 +226,8 @@ bootswatch.com -> Sandstone
 
 
 ### 07. Getting Our Datetime Ready for the Backend
+
+### 08. Saving Our Post on the Backend
+
+    cd backend/
+    sails generate model post
