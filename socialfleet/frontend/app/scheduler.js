@@ -28,4 +28,8 @@ angular.module('app').controller('Scheduler',function($scope, $http){
         $event.stopPropagation();
         $scope.opened = !$scope.opened;
     };
+
+    $http.get('/api/post/myPosts').then(function(posts){
+        console.log(posts);
+    });
 });

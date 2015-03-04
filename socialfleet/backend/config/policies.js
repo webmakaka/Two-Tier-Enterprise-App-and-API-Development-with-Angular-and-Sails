@@ -29,11 +29,12 @@ module.exports.policies = {
   '*': false,
 
   UserController:{
-     login: true 
+     login: true
   },
 
   PostController: {
-      tweet: ['jwtAuth']
+      tweet: ['jwtAuth'],
+      myPosts : ['jwtAuth']
   }
 
   /***************************************************************************

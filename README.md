@@ -238,3 +238,5 @@ bootswatch.com -> Sandstone
 ### 09. Associating Posts with Users
 
 + печатаем owner
+
+### 10. Getting All Our Posts

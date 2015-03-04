@@ -36,5 +36,11 @@ module.exports = {
 				// 	res.status(200).end();
 				// });
 		});
+	},
+
+	myPosts: function(req, res){
+		Post.find({owner: req.userId}, function(err, posts){
+			res.json(posts);
+		});
 	}
 };
