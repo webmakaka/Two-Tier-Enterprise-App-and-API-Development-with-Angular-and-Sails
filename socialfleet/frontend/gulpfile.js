@@ -66,6 +66,17 @@ gulp.task('vendors', function(){
         .pipe(gulp.dest(paths.temp));
 });
 
+gulp.task('scripts', function(){
+    var appFiles = gulp.src(paths.appSrc).pipe(gulp.dest(paths.temp));
+
+    return gulp.src(paths.tempIndex)
+        .pipe(inject(appFiles, {
+            relative: true
+        }))
+        .pipe(gulp.dest(paths.temp));
+});
+
+
 gulp.task('clean', function(){
     del([paths.temp]);
 });

@@ -8,10 +8,12 @@
     </head>
     <body ng-controller="Login">
 
-        <nav class="navbar navbar-default"></nav>
+        <nav class="navbar navbar-default">
+            <button ng-show="isAuthenticated()" class="btn btn-link pull-right" ng-click=logout()>Logout</button>
+        </nav>
 
         <div class="container">
-            <button class="btn btn-primary" ng-click=login()>Login</button>
+            <button ng-hide="isAuthenticated()" class="btn btn-primary" ng-click=login()>Login</button>
             <button class="btn btn-default" ng-click=tweet()>Tweet</button>
         </div>
         <!-- vendorInject:js -->

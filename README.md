@@ -204,3 +204,8 @@ tweet получили сообщение в консоли:
 ### 02. Styling with Bootstrap
 
 bootswatch.com -> Sandstone
+
+
+### 03. Setting up Our Nav
+
+(Добавили кнопки login, logout)
