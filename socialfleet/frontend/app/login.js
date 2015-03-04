@@ -18,6 +18,8 @@ angular.module('app').controller('Login', function($scope, $auth, $http){
         });
     };
 
+    $scope.time = new Date();
+
     $scope.minDate = new Date();
 
     $scope.opened = false;
