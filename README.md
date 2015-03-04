@@ -231,3 +231,10 @@ bootswatch.com -> Sandstone
 
     cd backend/
     sails generate model post
+
+
+В консоли backend печатаем дату и времся из формы frontend
+
+### 09. Associating Posts with Users
+
++ печатаем owner

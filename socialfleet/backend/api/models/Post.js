@@ -9,6 +9,9 @@ module.exports = {
 
   attributes: {
       message: 'string',
-      datetime: 'datetime'
+      datetime: 'datetime',
+      owner: {
+          model: 'user'
+      }
   }
 };
