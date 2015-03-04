@@ -17,4 +17,16 @@ angular.module('app').controller('Login', function($scope, $auth, $http){
 
         });
     };
+
+    $scope.minDate = new Date();
+
+    $scope.opened = false;
+
+    $scope.open = function($event){
+        $event.preventDefault();
+        $event.stopPropagation();
+        $scope.opened = !$scope.opened;
+
+        console.log($scope.opened);
+    };
 });

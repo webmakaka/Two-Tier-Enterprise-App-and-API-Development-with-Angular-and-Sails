@@ -212,3 +212,14 @@ bootswatch.com -> Sandstone
 
 
 ### 04. Passing the Tweet Message from the Frontend
+
+
+### 05. Setting Our Posting Date with the Datepicker
+
+
+    cd frontend/
+    bower install --save angular-bootstrap
+    Answer:: [3]
+
+
+    

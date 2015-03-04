@@ -8,7 +8,7 @@
     <body ng-controller="Login">
 
         <nav class="navbar navbar-default">
-            <button ng-show="isAuthenticated()" class="btn btn-link pull-right" ng-click=logout()>Logout</button>
+            <button ng-show="isAuthenticated()" class="btn btn-link navbar-btn pull-right" ng-click=logout()>Logout</button>
         </nav>
 
         <div class="container">
@@ -19,6 +19,13 @@
                 <div class="form-group">
                     <input class="form-control" ng-model="message" placeholder="tweet message">
                 </div>
+
+                <p class="input-group">
+                    <input class="form-control" datepicker-popup ng-model="date" is-open="opened" min-date="minDate">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
 
                 <button class="btn btn-default" ng-click=tweet()>Tweet</button>
             </div>
