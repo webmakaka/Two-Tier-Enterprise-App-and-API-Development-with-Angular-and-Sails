@@ -14,6 +14,8 @@ angular.module('app').controller('Post',function($scope, $http, $location, toast
         $scope.opened = !$scope.opened;
     };
 
+    $scope.delete = deletePost;
+
     function getPost(){
 
         console.log("newPost");
@@ -28,6 +30,7 @@ angular.module('app').controller('Post',function($scope, $http, $location, toast
     }
 
     if(isEditingPost()){
+        $scope.isEditing = true;
         getPost();
         $scope.save = editPost;
     } else {
@@ -70,6 +73,13 @@ angular.module('app').controller('Post',function($scope, $http, $location, toast
             datetime: datetime
         }).then(function(){
             toastr.success("new post updated");
+        });
+    }
+
+    function deletePost(){
+        $http.post('/api/post/destroy/' + id)
+        .then(function(){
+            toastr.info(" post has been deleted");
         });
     }
 
