@@ -260,3 +260,6 @@ bootswatch.com -> Sandstone
 http://localhost/#/post?id=3
 
 В response http://localhost/api/post/3 данные с sails.
+
+
+### 05. Securing Our Own Posts with Policies
