@@ -243,3 +243,12 @@ bootswatch.com -> Sandstone
 
 
 ### 11. Displaying All Our Posts
+
+
+## 05. Edit Posts
+
+### 02. Routing with UI-Router
+
+
+    cd frontend/
+    bower install --save angular-ui-router
