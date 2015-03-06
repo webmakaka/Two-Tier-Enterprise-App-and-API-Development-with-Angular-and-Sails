@@ -265,3 +265,7 @@ http://localhost/#/post?id=3
 ### 05. Securing Our Own Posts with Policies
 
 ### 06. Displaying Our Existing Posts
+
+### 07. Editing Our Posts
+
+http://localhost/#/post?id=3

@@ -2,9 +2,41 @@ angular.module('app').controller('Post',function($scope, $http, $location){
 
     var id = $location.search().id;
 
-    if(id) getPost();
+    $scope.time = new Date();
 
-    $scope.tweet = function(){
+    $scope.minDate = new Date();
+
+    $scope.opened = false;
+
+    $scope.open = function($event){
+        $event.preventDefault();
+        $event.stopPropagation();
+        $scope.opened = !$scope.opened;
+    };
+
+    function getPost(){
+
+        console.log("newPost");
+
+        $http.get('/api/post/' + id).then(function(post){
+            $scope.message = post.data.message;
+
+            var datetime = new Date(post.data.datetime);
+            $scope.date = datetime;
+            $scope.time = datetime;
+        });
+    }
+
+    if(isEditingPost()){
+        getPost();
+        $scope.save = editPost;
+    } else {
+        $scope.save = newPost;
+    }
+
+    function newPost(){
+
+        console.log("newPost");
 
         var datetime = new Date(
             $scope.date.getFullYear(),
@@ -19,29 +51,41 @@ angular.module('app').controller('Post',function($scope, $http, $location){
         }).then(function(){
 
         });
-    };
+    }
 
-    $scope.time = new Date();
+    function editPost(){
 
-    $scope.minDate = new Date();
+        console.log("editPost");
+        console.log("id: " + id);
 
-    $scope.opened = false;
+        var datetime = new Date(
+            $scope.date.getFullYear(),
+            $scope.date.getMonth(),
+            $scope.date.getDate(),
+            $scope.time.getHours()
+        );
 
-    $scope.open = function($event){
-        $event.preventDefault();
-        $event.stopPropagation();
-        $scope.opened = !$scope.opened;
-    };
+        $http.post('/api/post/update/' + id, {
+            message: $scope.message,
+            datetime: datetime
+        }).then(function(){
 
-    function getPost(){
-        $http.get('/api/post/' + id).then(function(post){
-            $scope.message = post.data.message;
-            $scope.date = post.data.datetime;
-
-            var datetime = new Date(past.data.datetime);
-
-            $scope.time = datetime;
         });
     }
 
+    function isEditingPost(){
+        return id;
+    }
+
+});
+
+
+angular.module('app').directive('datepickerPopup', function(){
+    return {
+        restrict: 'EAC',
+        require: 'ngModel',
+        link: function(scope, element, attr, controller){
+            controller.$formatters.shift();
+        }
+    };
 });

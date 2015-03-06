@@ -18,5 +18,5 @@ module.exports = function(req, res, next){
 };
 
 function handleError(){
-    return res.status(401).send({error: 'You are not authorized'});
+    return res.status(401).send({error: 'My Error: You are not authorized'});
 }

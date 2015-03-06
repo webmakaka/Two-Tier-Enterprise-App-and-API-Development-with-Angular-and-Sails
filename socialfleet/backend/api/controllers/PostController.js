@@ -15,13 +15,12 @@ module.exports = {
 			var message = req.body.message;
 			var datetime = req.body.datetime;
 
-
 			Post.create({
 				message: message,
 				datetime: datetime,
 				owner: req.userId
 			}).exec(function(err, post){
-				console.log("working", post, err);
+				console.log("PostController: OK: ", post, err);
 			});
 
 				// var T = new Twit({
