@@ -269,3 +269,6 @@ http://localhost/#/post?id=3
 ### 07. Editing Our Posts
 
 http://localhost/#/post?id=3
+
+
+### 08. Making Our Post List Clickable

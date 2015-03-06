@@ -11,7 +11,7 @@ angular.module('app', ['satellizer', 'ui.bootstrap', 'ui.router'])
                 controller: 'MyPosts'
             })
             .state('post', {
-                url: '/post',
+                url: '/post?id',
                 templateUrl: 'post.html',
                 controller: 'Post'
             });
