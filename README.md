@@ -249,6 +249,8 @@ bootswatch.com -> Sandstone
 
 ### 02. Routing with UI-Router
 
-
     cd frontend/
     bower install --save angular-ui-router
+
+
+### 03. Creating a New Post State

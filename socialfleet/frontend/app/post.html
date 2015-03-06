@@ -1,0 +1,14 @@
+<div ng-controller="Post" class="well clearfix">
+    <div class="form-group">
+        <textarea rows=4 class="form-control" ng-model="message" placeholder="tweet message"></textarea>
+    </div>
+
+    <p class="input-group">
+        <input class="form-control" datepicker-popup ng-model="date" is-open="opened" min-date="minDate">
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+        </span>
+    </p>
+    <timepicker ng-model="time"></timepicker>
+    <button class="btn btn-primary pull-right" ng-disabled="!date" ng-click=tweet()>Tweet</button>
+</div>

@@ -4,9 +4,15 @@ angular.module('app', ['satellizer', 'ui.bootstrap', 'ui.router'])
             url: '/api/user/login'
         });
 
-        $stateProvider.state('posts', {
-            url: '/',
-            templateUrl: 'myposts.html',
-            controller: 'MyPosts'
-        });
+        $stateProvider
+            .state('posts', {
+                url: '/',
+                templateUrl: 'myposts.html',
+                controller: 'MyPosts'
+            })
+            .state('post', {
+                url: '/post',
+                templateUrl: 'post.html',
+                controller: 'Posts'
+            });
     });
