@@ -13,6 +13,6 @@ angular.module('app', ['satellizer', 'ui.bootstrap', 'ui.router'])
             .state('post', {
                 url: '/post',
                 templateUrl: 'post.html',
-                controller: 'Posts'
+                controller: 'Post'
             });
     });

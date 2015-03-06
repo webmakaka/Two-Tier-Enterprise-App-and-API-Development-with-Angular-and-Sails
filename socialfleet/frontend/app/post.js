@@ -1,4 +1,8 @@
-angular.module('app').controller('Post',function($scope, $http){
+angular.module('app').controller('Post',function($scope, $http, $location){
+
+    var id = $location.search().id;
+
+    if(id) getPost();
 
     $scope.tweet = function(){
 
@@ -28,4 +32,11 @@ angular.module('app').controller('Post',function($scope, $http){
         $event.stopPropagation();
         $scope.opened = !$scope.opened;
     };
+
+    function getPost(){
+        $http.get('/api/post/' + id).then(function(post){
+            $scope.post = post;
+        });
+    }
+
 });

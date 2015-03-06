@@ -254,3 +254,9 @@ bootswatch.com -> Sandstone
 
 
 ### 03. Creating a New Post State
+
+### 04. Getting Our Post Details
+
+http://localhost/#/post?id=3
+
+В response http://localhost/api/post/3 данные с sails.
