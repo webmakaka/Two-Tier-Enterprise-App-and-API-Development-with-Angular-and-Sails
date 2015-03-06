@@ -27,6 +27,7 @@
     http://localhost:1337/user/create?name=Tim&email=a@a.a
     http://localhost:1337/user
 
+___
 
 ## 02. Posting and Authentication
 
@@ -110,6 +111,7 @@ localhost:8000
     npm install --save-dev del
     gulp
 
+___
 
 ## 03. Posts
 
@@ -197,6 +199,8 @@ tweet получили сообщение в консоли:
 
 ### 07. Tweeting with Authenticated User
 
+___
+
 
 ## 04. Making a New Post
 
@@ -244,6 +248,7 @@ bootswatch.com -> Sandstone
 
 ### 11. Displaying All Our Posts
 
+___
 
 ## 05. Edit Posts
 
@@ -272,3 +277,26 @@ http://localhost/#/post?id=3
 
 
 ### 08. Making Our Post List Clickable
+
+### 09. Getting Some Feedback with Toastr Notifications
+
+    cd frontend/
+    bower install --save angular-toastr
+    bower install --save angular-animate
+
+toastr.css пришлось отдельно скопировать в app/
+
+
+### 10. Deleting a Post
+
+___
+
+## 06. Scheduling Service
+
+### 02. Setting up Our Service with a Timed Interval
+
+    cd backend
+    node sheduler.js
+
+
+    

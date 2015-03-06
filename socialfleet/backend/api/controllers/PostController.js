@@ -21,6 +21,7 @@ module.exports = {
 				owner: req.userId
 			}).exec(function(err, post){
 				console.log("PostController: OK: ", post, err);
+				res.status(200).end();
 			});
 
 				// var T = new Twit({
