@@ -9,15 +9,25 @@
 
         <nav class="navbar navbar-default">
             <div class="container">
-                <button class="btn btn-primary navbar-btn" ui-sref="post">New Post</button>
-                <button class="btn btn-link navbar-btn" ui-sref="posts">My Post</button>
+                <button ng-show="isAuthenticated()" class="btn btn-primary navbar-btn" ui-sref="post">New Post</button>
+                <button ng-show="isAuthenticated()" class="btn btn-link navbar-btn" ui-sref="posts">My Post</button>
                 <button ng-show="isAuthenticated()" class="btn btn-link navbar-btn pull-right" ng-click=logout()>Logout</button>
             </div>
         </nav>
 
         <div class="container">
-            <button ng-hide="isAuthenticated()" class="btn btn-primary" ng-click=login()>Login</button>
-                <div ui-view></div>
+            <div ng-hide="isAuthenticated()" class="col-sm-8 com-md-6 col-md-offset-3 col-sm-offset-2">
+                <div class="jumbotron">
+                    <img height=200 width=200 src="https://g.twimg.com/Twitter_logo_blue.png" class="img-responsive" alt="Responsive image">
+                    <h1>make a post!</h1>
+                    <p>.. or two.</p>
+                    <button class="btn btn-primary btn-lg" ng-click=login()>Login</button>
+
+                </div>
+            </div>
+
+
+                <div ng-show="isAuthenticated()" ui-view></div>
         </div>
         <!-- vendorInject:js -->
         <!-- endinject -->
