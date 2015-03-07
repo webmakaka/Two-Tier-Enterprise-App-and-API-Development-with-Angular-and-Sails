@@ -327,3 +327,7 @@ ___
 
     cd backend
     node sheduler.js
+
+### 07. Our Final and Big Test
+
+### 08. Improving Our Visual Design

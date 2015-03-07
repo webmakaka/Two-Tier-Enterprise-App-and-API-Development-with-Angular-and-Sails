@@ -1,0 +1,12 @@
+body {
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.well {
+    background-color: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.03);
+}
