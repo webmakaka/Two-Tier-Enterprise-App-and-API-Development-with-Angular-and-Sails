@@ -1,5 +1,5 @@
-
 var sails = require('sails');
+var Twit = require('twit');
 
 sails.load(function(){
     checkPosts();
@@ -12,7 +12,11 @@ function checkPosts(){
         .exec(function(err, posts){
             console.log(posts);
             posts.forEach(function(post){
-                // sendTweet();
+                sendTweet(
+                    post.owner.twitterToken,
+                    post.owner.twitterSecret,
+                    post.message
+                );
             });
     });
 }
@@ -21,14 +25,14 @@ function sendTweet(token, secret, message){
     var T = new Twit({
         consumer_key:         config.TWITTER_KEY,
         consumer_secret:      config.TWITTER_SECRET,
-        access_token:         user.twitterToken,
-        access_token_secret:  user.twitterSecret
+        access_token:         token,
+        access_token_secret:  secret
     });
 
-    // T.post('statuses/update', { status: message }, function(err, data, response) {
-    //     console.log(data, err);
-    //     res.status(200).end();
-    // });
+    T.post('statuses/update', { status: message }, function(err, data, response) {
+        console.log(data, err);
+        // console.log("sent successfully", err);
+    });
 }
 
 //
