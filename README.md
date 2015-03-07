@@ -299,4 +299,12 @@ ___
     node sheduler.js
 
 
+### 03. Getting Posts That Are Ready to Send
+
+Удалили файл backend/.tmp/localDiskDb.db
+
+    cd backend
+    node sheduler.js
+
+
     
