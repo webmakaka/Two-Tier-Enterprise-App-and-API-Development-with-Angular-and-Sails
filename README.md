@@ -333,3 +333,5 @@ ___
 ### 08. Improving Our Visual Design
 
 ### 09. A Better Looking Login
+
+### 10. Fixes and Wrapping Up
