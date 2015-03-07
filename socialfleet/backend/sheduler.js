@@ -2,12 +2,20 @@ var sails = require('sails');
 var Twit = require('twit');
 
 sails.load(function(){
-    checkPosts();
+    setInterval(function(){
+        checkPosts();
+    }, config.schedulerInteval);
+
 });
 
 function checkPosts(){
     Post.find()
-        .where({scheduledfor: {'<': new Date()}})
+        .where({
+            scheduledfor: {
+                '<': new Date()
+            },
+            isPosted: false
+        })
         .populate('owner')
         .exec(function(err, posts){
             console.log(posts);
@@ -15,13 +23,16 @@ function checkPosts(){
                 sendTweet(
                     post.owner.twitterToken,
                     post.owner.twitterSecret,
-                    post.message
+                    post.message,
+                    function(){
+                        updateSentPost(post);
+                    }
                 );
             });
     });
 }
 
-function sendTweet(token, secret, message){
+function sendTweet(token, secret, message, cb){
     var T = new Twit({
         consumer_key:         config.TWITTER_KEY,
         consumer_secret:      config.TWITTER_SECRET,
@@ -30,12 +41,15 @@ function sendTweet(token, secret, message){
     });
 
     T.post('statuses/update', { status: message }, function(err, data, response) {
-        console.log(data, err);
-        // console.log("sent successfully", err);
+        //console.log(data, err);
+        console.log("sent successfully", err);
+        cb();
     });
 }
 
-//
-// setInterval(function(){
-//     console.log("hello");
-// },1000);
+function updateSentPost(post){
+    post.isPosted = true;
+    post.save(function(){
+        console.log("post updated");
+    });
+}

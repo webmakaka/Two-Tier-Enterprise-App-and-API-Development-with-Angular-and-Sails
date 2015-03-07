@@ -301,13 +301,29 @@ ___
 
 ### 03. Getting Posts That Are Ready to Send
 
-Удалили файл backend/.tmp/localDiskDb.db
+В chrome удаляем Resources -> Local Storage -> satellizer_token  
+Удаляем файл backend/.tmp/localDiskDb.db
+
+Делаем в браузере login.
+
+    cd backend
+    node sheduler.js
+
+С первого раза не создалась запись twitterToken в новом backend/.tmp/localDiskDb.db
+
+
+### 04. Populating User Data for the Tweet
+
+    cd backend
+    node sheduler.js
+
+### 05. Posting Our Scheduled Posts to Twitter
 
     cd backend
     node sheduler.js
 
 
-### 04. Populating User Data for the Tweet (В консоли печатается owner как undefined)
+### 06. Marking Posts as Sent
 
     cd backend
     node sheduler.js
