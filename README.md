@@ -307,4 +307,7 @@ ___
     node sheduler.js
 
 
-    
+### 04. Populating User Data for the Tweet (В консоли печатается owner как undefined)
+
+    cd backend
+    node sheduler.js
